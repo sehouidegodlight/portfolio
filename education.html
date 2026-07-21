@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éducation — Godlight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<div class="progress-rail" aria-hidden="true"><div class="progress-rail__fill" id="railFill"></div></div>
+
+<header class="nav">
+  <a href="index.html" class="nav__mark">Godlight</a>
+  <nav class="nav__links">
+    <a href="index.html">Accueil</a>
+    <a href="competences.html">Compétences</a>
+    <a href="projets.html">Projets</a>
+    <a href="education.html" class="is-active">Éducation</a>
+    <a href="experiences.html">Expériences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-header">
+    <h1 class="page-header__title">Éducation</h1>
+    <p class="page-header__intro">Mon parcours</p>
+  </section>
+
+  <section class="section section--top">
+    <article class="edu-entry">
+      <div class="edu-entry__head">
+        <h3 class="edu-entry__title">Licence Mathématiques, Informatique &amp; Applications (MIA) — en cours</h3>
+        <span class="edu-entry__place">Faculté des Sciences et Techniques (FAST) — Université d'Abomey-Calavi</span>
+      </div>
+      <p class="edu-entry__desc">
+        Formation orientée vers l'application de l'informatique et des mathématiques
+        à des problématiques concrètes.
+      </p>
+    </article>
+
+    <article class="edu-entry">
+      <div class="edu-entry__head">
+        <h3 class="edu-entry__title">Baccalauréat, Série C</h3>
+      </div>
+      <p class="edu-entry__desc">
+      Filière scientifique à dominante mathématiques, base du parcours actuel
+      en sciences et informatique.
+      </p>
+    </article>
+
+    <a href="index.html" class="btn btn--ghost btn--back">← Retour à l'accueil</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Godlight · Abomey-Calavi, Bénin</p>
+</footer>
+
+<script>
+  const rail = document.getElementById('railFill');
+  function updateRail() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    rail.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateRail, { passive: true });
+  updateRail();
+</script>
+
+</body>
+</html>
